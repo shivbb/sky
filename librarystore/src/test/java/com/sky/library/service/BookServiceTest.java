@@ -15,10 +15,12 @@ import static org.junit.jupiter.api.Assertions.*;
 public class BookServiceTest extends BaseTest {
 
     public static final String BOOK_999 = "BOOK-999";
-    @Autowired
-    IBookService iBookService;
     private String msg_invalid_book_ref = "Book reference must begin with 'BOOK-'";
     private String msg_book_not_found = "Book with reference '%s' is not found";
+
+    @Autowired
+    IBookService iBookService;
+
 
     @Test
     public void test_retrieveBook_with_invalid_text() {

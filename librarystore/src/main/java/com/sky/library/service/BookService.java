@@ -27,13 +27,14 @@ public class BookService implements IBookService {
 
     @Override
     public Book retrieveBook(String bookReference) throws Exception {
+        log.debug("retrieve Book with the ref:"+bookReference);
         return getBook(bookReference);
     }
 
 
     @Override
     public String getBookSummary(String bookReference) {
-
+        log.debug("fetching book summary for the book ref:"+bookReference);
         return getBook(bookReference).toString();
     }
 
